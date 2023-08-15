@@ -1,0 +1,6 @@
+/* pages/index/module/guide.wxss */
+@import "module.wxss";
+
+.card image{
+  width: 100%;
+}

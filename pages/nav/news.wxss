@@ -1,0 +1,56 @@
+/* pages/nav/news.wxss */
+page{
+  background-color: #F8F8F8;
+}
+
+/* 顶部导航栏开始 */
+.topbar{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.topbar .topbar-disabled{
+  color: gray;
+}
+/* 顶部导航栏结束 */
+
+
+.news-item{
+  border-top: 1rpx solid #eee;
+  padding: 20rpx 25rpx;
+  background-color: white;
+}
+
+.news-item .item-head{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #AAA;
+}
+
+.news-item .item-head .head-source .source-name{
+  color: rgba(0, 174, 255, 0.637);
+}
+
+.news-item .item-title{
+  margin-top: 20rpx;
+  font-weight: 800rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news-item .item-content{
+  margin-top: 10rpx;
+  /* 显示多行 */
+  display:-webkit-box; 
+  overflow:hidden; 
+  /* 5为显示的行数 */
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  font-size: 30rpx;
+  color: #555;
+}

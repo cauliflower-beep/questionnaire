@@ -1,0 +1,21 @@
+// pages/index/module/expert.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    expertList: [
+      {
+        id: 0,
+        name: "梅小元",
+        rank: "护士"
+      },
+      {
+        id: 1,
+        name: "陈娟",
+        rank:"护士"
+      }
+    ]
+  }
+})

@@ -1,0 +1,23 @@
+<!--pages/index/module/expert.wxml-->
+<import src="template.wxml" />
+
+<view class='container'>
+  <template is="head" />
+  <view class='body'>
+    <view class='title'>
+      <text>专家风采</text>
+    </view>
+    <view class='card'>
+      <block wx:for="{{expertList}}" wx:key="name">
+        <view class='card-item'>
+          <navigator url='expertDetail?id={{item.id}}'>
+            <text class='rank'>{{item.rank}}</text>
+            <text class='name'>{{item.name}}</text>
+            <text class='item-right'>></text>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+  <template is="foot" />
+</view>

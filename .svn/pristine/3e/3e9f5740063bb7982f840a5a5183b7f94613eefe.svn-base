@@ -1,0 +1,35 @@
+/* pages/equipment/equipment.wxss */
+swiper{
+  width: 100%;
+  height: 250rpx;
+}
+
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+.topbar{
+  padding: 10rpx 35rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topbar .topbar-item{
+  padding: 10rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.topbar .topbar-item image{
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.topbar .topbar-item text{
+  font-size: 30rpx;
+}

@@ -1,0 +1,23 @@
+<!--pages/more/studentReimbursement.wxml-->
+<view class='container'>
+
+  <view class='card'>
+    <block wx:for='{{qas}}' wx:key=''>
+      <view class='card-item'>
+        <view class='item-title'>
+          <view class='image-container title-image'>
+            <image src='{{questionImgUrl}}'></image>
+          </view>
+          <view class='title-text'>{{item.question}}</view>
+        </view>
+        <view class='item-content'>
+          <view class='image-container content-image'>
+            <image src='{{answerImgUrl}}'></image>
+          </view>
+          <view class='contet-text'><text>{{item.answer}}</text></view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

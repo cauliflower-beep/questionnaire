@@ -1,0 +1,119 @@
+<!--index.wxml-->
+<view class='container'>
+
+  <!-- <view class='unlogin' hidden='{{isLogin}}'>
+    <view class='unlogin-note'>点击登录，开始守护您的身体健康</view>
+    <view class='unlogin-btn'>登录</view>
+  </view> -->
+
+  <view hidden='{{!isLogin}}'>
+    <swiper class='swiper' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+      <block wx:for='{{swiperImgUrls}}' wx:key='url'>
+        <swiper-item>
+          <image src='{{item.url}}' class='slide-image' />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class='module'>
+      <block wx:for='{{introductionImgUrls}}' wx:key='url'>
+        <navigator url='{{item.url}}'>
+          <view class='module-item'>
+            <image src='{{item.imgUrl}}'></image>
+            <text>{{item.name}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+
+    <view class='card' hidden='{{!isWeather}}'>
+      <view class='card-head'>
+        <view class='card-head-content'>
+          <text>近日天气</text>
+          <text class='content-right'>{{weather[0].date}}</text>
+        </view>
+      </view>
+      <view class='card-body'>
+        <block wx:for='{{weather}}' wx:key='name'>
+          <view class='card-body-item'>
+            <!-- 后三天  -->
+            <block wx:if='{{index}}'>
+              <image class='card-body-item-weather' src='{{item.dayPictureUrl}}'></image>
+            </block>
+            <!-- 今天白天  -->
+            <block wx:elif='{{nowHours >= dayStartTime && nowHours < nightStartTime}}'>
+              <image class='card-body-item-weather' src='{{item.dayPictureUrl}}'></image>
+            </block>
+            <!-- 今天晚上  -->
+            <block wx:else>
+              <image class='card-body-item-weather' src='{{item.nightPictureUrl}}'></image>
+            </block>
+            <view class='item-name'>
+              <text wx:if='{{index}}'>{{item.date}}</text>
+              <text wx:else>今天</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class='card'>
+      <view class='card-head'>
+        <view class='card-head-content'>
+          <text>就诊服务</text>
+        </view>
+      </view>
+      <view class='card-body'>
+        <block wx:for='{{consultation}}' wx:key='name'>
+          <view class='card-body-item' data-url='{{item.url}}' bindtap='toService'>
+            <image class='card-body-item-image' src='{{item.imgUrl}}'></image>
+            <view class='item-name'>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class='card'>
+      <view class='card-head'>
+        <view class='card-head-content'>
+          <text>更多服务</text>
+        </view>
+      </view>
+      <view class='card-body'>
+        <block wx:for='{{information}}' wx:key='name'>
+          <view class='card-body-item' data-url='{{item.url}}' bindtap='toService'>
+            <image class='card-body-item-image' src='{{item.imgUrl}}'></image>
+            <view class='item-name'>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class='card'>
+      <view class='card-head'>
+        <view class='card-head-content'>
+          <text>健康天地</text>
+        </view>
+      </view>
+      <view class='card-body'>
+        <block wx:for='{{healthy}}' wx:key='name'>
+          <view class='card-body-item' data-url='{{item.url}}' bindtap='toService'>
+            <image class='card-body-item-image' src='{{item.imgUrl}}'></image>
+            <view class='item-name'>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class='foot'>
+
+    </view>
+  </view>
+
+</view>

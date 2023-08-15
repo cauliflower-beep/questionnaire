@@ -1,0 +1,27 @@
+<!--pages/nav/feedback.wxml-->
+<view class='container'>
+
+  <!-- 反馈类型 -->
+  <view class='type' bindtap='chooseType'>
+    <view class='type-title'>反馈类型</view>
+    <view class='type-content'>
+      <view class='content-name'>{{feedbackType[feedbackTypeIndex]}} ></view>
+    </view>
+  </view>
+
+  <!-- 意见内容以及联系方式 -->
+  <view class='feedback'>
+    <!-- 意见内容 -->
+    <view class='feedback-content'>
+      <textarea placeholder='请留下您的宝贵意见或建议，我们将努力改进（不少于五个字）' bindinput='inputOpinion'></textarea>
+    </view>
+    <!-- 联系方式 -->
+    <view class='feedback-contact'>
+      <input type='number' placeholder='手机号码/QQ/邮箱' bindinput='inputContact'></input>
+    </view>
+  </view>
+
+  <!-- 提交意见 -->
+  <view class='submit' bindtap='submit'>提交</view>
+
+</view>

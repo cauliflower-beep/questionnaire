@@ -1,0 +1,9 @@
+<template name="head">
+  <view class='head'>
+    <image src='https://s1.ax1x.com/2018/08/04/PDCxR1.png'></image>
+  </view>
+</template>
+
+<template name="foot">
+  <view class='foot'></view>
+</template>

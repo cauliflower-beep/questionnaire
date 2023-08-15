@@ -1,0 +1,12 @@
+<!--pages/more/price.wxml-->
+<view class='container'>
+
+  <view class='card'>
+    <view class='card-item'>
+      <block wx:for='{{images}}' wx:key=''>
+        <image class='price' src='{{item.image}}'></image>
+      </block>
+    </view>
+  </view>
+
+</view>

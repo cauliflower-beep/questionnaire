@@ -1,0 +1,211 @@
+Page({
+  data: {
+    // 小时数
+    nowHours: "",
+    // 日间开始时间
+    dayStartTime: 5,
+    // 夜间开始时间
+    nightStartTime: 17,
+
+    // 轮播图
+    swiperImgUrls: [
+      {
+        url: 'http://img.gaosan.com/upload/webimg/2149.jpg'
+      },
+      {
+        url: 'https://s1.ax1x.com/2018/07/15/PMOQFU.jpg'
+      },
+      {
+        url: 'https://s1.ax1x.com/2018/07/15/PMX9XR.jpg'
+      }
+    ],
+    // 是否显示面板指示点
+    indicatorDots: true,
+    // 是否自动播放
+    autoplay: true,
+    // 是否采用衔接滑动
+    circular: true,
+    // 自动切换时间间隔
+    interval: 5000,
+    // 滑动动画时长
+    duration: 1000,
+
+    // 近日天气
+    weather: [],
+
+    // 近日天气是否加载成功
+    isWeather: false,
+
+    // 就诊服务
+    introductionImgUrls: [
+      {
+        url: "../module/introduction",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCP4s.png",
+        name: "医院简介"
+      },
+      {
+        url: "../module/department",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCZuT.png",
+        name: "科室介绍"
+      },
+      {
+        url: "../module/consult",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCEvV.png",
+        name: "联系方式"
+      },
+      {
+        url: "../module/expert",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCAg0.png",
+        name: "专家风采"
+      },
+      {
+        url: "../module/navigation",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCk3q.png",
+        name: "来院导航"
+      },
+      {
+        url: "../module/guide",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCFCn.png",
+        name: "就诊指南"
+      }
+    ],
+    consultation: [
+      {
+        name: "在线挂号",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCuE4.png",
+        url: "../consultation/registration"
+      },
+      {
+        name: "就诊缴费",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCM59.png",
+        url: "../consultation/payment"
+      },
+      {
+        name: "取报告单",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCKUJ.png",
+        url: "../consultation/report"
+      },
+      {
+        name: "快速问诊",
+        imgUrl: "https://s1.ax1x.com/2018/08/06/PrdpHP.png",
+        url: "../consultation/consult"
+      }
+    ],
+
+    // 更多服务
+    information: [
+      {
+        name: "智能导诊",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCd5d.png",
+        url: "../more/ai"
+      },
+      {
+        name: "学生报销",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCD2t.png",
+        url: "../more/studentReimbursement"
+      },
+      {
+        name: "教工报销",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCrxP.png",
+        url: "../more/teacherReimbursement"
+      },
+      {
+        name: "价格目录",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCyKf.png",
+        url: "../more/price"
+      },
+      {
+        name: "我的病历",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCB8I.png",
+        url: "../more/medicalRecord"
+      },
+      {
+        name: "挂号查询",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCcqS.png",
+        url: "../more/search"
+      },
+      {
+        name: "应诊时间",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDC6r8.png",
+        url: "../more/time"
+      },
+      {
+        name: "就医反馈",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDC0PA.png",
+        url: "../more/feedback"
+      }
+    ],
+
+    // 健康天地
+    healthy: [
+      {
+        name: "健康教育",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDC8v6.png",
+        url: "../health/education"
+      },
+      {
+        name: "针灸推拿",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDC3gx.png",
+        url: "../health/acupuncture"
+      },
+      {
+        name: "中医调理",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDC181.png",
+        url: "../health/conditioning"
+      },
+      {
+        name: "国医堂",
+        imgUrl: "https://s1.ax1x.com/2018/08/04/PDCJKK.png",
+        url: "../health/tang"
+      }
+    ]
+  },
+
+  /**
+   * 前往服务页面
+   */
+  toService: function (e) {
+    console.log(e)
+    console.log(e.currentTarget.dataset.url)
+    wx.navigateTo({
+      url: e.currentTarget.dataset.url,
+    })
+  },
+
+  onLoad: function () {
+    // 获取当前时间戳
+    var timestamp = Date.parse(new Date());
+    timestamp = timestamp / 1000;
+
+    // 获取当前时间
+    var n = timestamp * 1000;
+    var date = new Date(n);
+    // 小时
+    var hours = date.getHours();
+    console.log(hours);
+
+    this.setData({
+      nowHours: hours
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    var _this = this;
+    wx.request({
+      url: 'https://api.map.baidu.com/telematics/v3/weather?location=江夏&output=json&ak=ttSQMAQidDvZQZHL14e3YTMvHgZuOuOg',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data.results[0]);
+        _this.setData({
+          weather: res.data.results[0].weather_data,
+          isWeather: true
+        })
+      }
+    })
+  }
+})

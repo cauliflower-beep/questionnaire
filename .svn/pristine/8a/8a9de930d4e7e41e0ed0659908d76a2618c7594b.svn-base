@@ -1,0 +1,15 @@
+/* pages/index/module/departmentDetail.wxss */
+@import "module.wxss";
+
+.department{
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+.title{
+  flex: 1;
+}
+
+.content{
+  flex: 3;
+}

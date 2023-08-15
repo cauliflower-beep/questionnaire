@@ -1,0 +1,38 @@
+<!--pages/consultation/consult.wxml-->
+<view class='container'>
+
+  <!-- 顶部图片 -->
+  <view class='head'>
+    <image src='{{consultImgUrl}}'></image>
+  </view>
+
+  <!-- 问诊表单 -->
+  <view class='body'>
+    <view class='symptoms'>
+      <textarea maxlength='-1' placeholder='请尽可能的详尽描述您的症状，疾病以及身体状况，以便医生给出更好的针对性指导。'></textarea>
+    </view>
+    <view class='info'>
+      <view class='info-gender'>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio">
+              <radio value="男" color='rgb(0, 204, 255)'/>男
+          </label>
+          <label class="radio">
+              <radio value="女" color='rgb(0, 204, 255)'/>女
+          </label>
+        </radio-group>
+      </view>
+      <view class='info-age'>
+        <text>年龄：</text>
+        <input type='number'></input>
+      </view>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class='submit'>提交</view>
+
+  <!-- 底部提示 -->
+  <view class='tips'>声明：在线咨询不能代替确诊，医生的建议仅供参考！</view>
+
+</view>

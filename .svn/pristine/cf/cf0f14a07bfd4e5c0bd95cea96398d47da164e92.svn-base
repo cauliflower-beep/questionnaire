@@ -1,0 +1,2 @@
+<!--pages/index/module/expertDetail.wxml-->
+<text>{{id}}</text>

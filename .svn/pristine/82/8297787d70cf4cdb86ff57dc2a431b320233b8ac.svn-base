@@ -1,0 +1,7 @@
+/* pages/index/module/navigation.wxss */
+@import "module.wxss";
+
+.container text{
+  display: block;
+  margin: 30rpx 0;
+}

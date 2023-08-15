@@ -1,0 +1,30 @@
+/* pages/more/feedback.wxss */
+@import "more.wxss";
+
+textarea{
+  width: 575rpx;
+  height: 700rpx;
+}
+
+.card-item .content-body{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-item .content-body .note{
+  line-height: 70rpx;
+  font-size: 30rpx;
+}
+
+.submit{
+  border-radius: 20rpx;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(86, 88, 201);
+  letter-spacing: 5rpx;
+  color: white;
+}

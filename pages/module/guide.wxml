@@ -1,0 +1,15 @@
+<!--pages/index/module/guide.wxml-->
+<import src="template.wxml" />
+
+<view class='container'>
+  <template is="head" />
+  <view class='body'>
+    <view class='title'>
+      <text>就诊指南</text>
+    </view>
+    <view class='card'>
+      <image src='{{imgUrl}}'></image>
+    </view>
+  </view>
+  <template is="foot" />
+</view>

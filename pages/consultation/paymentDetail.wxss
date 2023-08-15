@@ -1,0 +1,125 @@
+/* pages/consultation/paymentDetail.wxss */
+page{
+  background-color: #F8F8F8;
+}
+
+/* 头部开始 */
+.head{
+  padding: 25rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  color: #888888;
+}
+/* 头部结束 */
+
+
+/* 明细列表开始 */
+.list-item{
+  border-top: 1rpx solid #F8F8F8;
+  padding: 10rpx 25rpx;
+  background-color: white;
+}
+
+.list-item .item-line{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 60rpx;
+}
+
+.list-item .line-first{
+  font-weight: 700;
+}
+
+.list-item .line-first .item-name{
+  color: #333;
+}
+
+.list-item .line-first .item-total{
+  color: #FF6049;
+}
+
+.list-item .line-second{
+  font-size: 30rpx;
+  color: #888888;
+}
+/* 明细列表结束 */
+
+
+/* 底部防遮挡层开始 */
+.foot{
+  height: 100rpx;
+}
+/* 底部防遮挡层结束 */
+
+
+/* 底部固定栏开始 */
+.operation{
+  border-top: 1rpx solid #eeeeee;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.operation .operation-content{
+  padding: 20rpx;
+  width: 510rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operation .operation-content .content-total{
+  line-height: 100rpx;
+}
+
+.operation .operation-content .content-total .total-price{
+  font-size: 40rpx;
+  color: rgb(255, 102, 0);
+}
+
+.operation .submit{
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(13, 177, 13);
+  color: white;
+}
+/* 底部固定栏结束 */
+
+
+/* 温馨提示开始 */
+.tips{
+  padding: 25rpx;
+}
+
+.tips-head{
+  display: flex;
+  align-items: center;
+}
+
+.tips-head image{
+  margin-right: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.tips-body{
+  padding-top: 20rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #888888;
+}
+/* 温馨提示结束 */

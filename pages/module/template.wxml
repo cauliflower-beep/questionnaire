@@ -1,0 +1,9 @@
+<template name="head">
+  <view class='head'>
+    <image src='http://oss.gxzyy.com.cn/20190816/145238920.jpg' mode='aspectFill'></image>
+  </view>
+</template>
+
+<template name="foot">
+  <view class='foot'></view>
+</template>

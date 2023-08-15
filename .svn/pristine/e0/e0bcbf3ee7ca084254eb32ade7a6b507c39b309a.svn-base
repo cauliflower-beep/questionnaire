@@ -1,0 +1,81 @@
+/* personal.wxss  */
+page{
+  background-color: #F8F8F8;
+  color: #555;
+}
+
+.container{
+  padding: 25rpx;
+}
+
+.userinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30rpx;
+  border-radius: 10rpx;
+  width: 100%;
+  height: 400rpx;
+  background: linear-gradient(to bottom right, rgb(30, 255, 0), rgb(31, 211, 243));
+  /* box-shadow: 0 0 2px 2px #CCC; */
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%; 
+}
+
+.userinfo-nickname {
+  color: whitesmoke;
+}
+
+.nav{
+  margin-bottom: 30rpx;
+  border-radius: 10rpx;
+  padding: 0 30rpx;
+  background-color: white;
+  /* box-shadow: 0 0 2px 2px #CCC; */
+}
+
+.nav-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item .item-image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.nav-item image{
+  width: 100%;
+  height: 100%;
+}
+
+.nav-item .item-title{
+  width: 560rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-right: 30rpx; */
+  border-bottom: 1rpx solid #efefef;
+}
+
+.nav-item:last-child .item-title {
+  border: 0;
+}
+
+.nav-item text{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.foot{
+  height: 40rpx;
+}

@@ -1,0 +1,7 @@
+/* pages/more/price.wxss */
+@import "more.wxss";
+
+.price{
+  width: 100%;
+  height: 2700rpx;
+}

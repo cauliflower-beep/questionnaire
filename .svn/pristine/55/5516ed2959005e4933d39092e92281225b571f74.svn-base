@@ -1,0 +1,129 @@
+// pages/equipment/equipment.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    // 轮播图
+    swiperImgUrls: [
+      {
+        url: 'http://img.gaosan.com/upload/webimg/2149.jpg'
+      },
+      {
+        url: 'https://s1.ax1x.com/2018/07/15/PMOQFU.jpg'
+      },
+      {
+        url: 'https://s1.ax1x.com/2018/07/15/PMX9XR.jpg'
+      }
+    ],
+    // 是否显示面板指示点
+    indicatorDots: true,
+    // 是否自动播放
+    autoplay: true,
+    // 是否采用衔接滑动
+    circular: true,
+    // 自动切换时间间隔
+    interval: 5000,
+    // 滑动动画时长
+    duration: 1000,
+
+    topbar: [
+      {
+        name: "紧急报修",
+        img: "https://s1.ax1x.com/2018/08/12/PcNmUP.png",
+        url: ""
+      },
+      {
+        name: "驻场服务",
+        img: "https://s1.ax1x.com/2018/08/12/PcNVHI.png",
+        url: ""
+      },
+      {
+        name: "公告",
+        img: "https://s1.ax1x.com/2018/08/12/PctThT.png",
+        url: ""
+      },
+      {
+        name: "公告",
+        img: "https://s1.ax1x.com/2018/08/12/PctThT.png",
+        url: ""
+      },
+      {
+        name: "公告",
+        img: "https://s1.ax1x.com/2018/08/12/PctThT.png",
+        url: ""
+      },
+      {
+        name: "回访满意度",
+        img: "https://s1.ax1x.com/2018/08/12/PcNn4f.png",
+        url: ""
+      },
+      {
+        name: "创建工单",
+        img: "https://s1.ax1x.com/2018/08/12/PcN8Ds.png",
+        url: ""
+      }
+    ]
+  },
+
+  toAnnouncement: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

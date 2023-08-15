@@ -1,0 +1,6 @@
+<!--pages/index/module/navigation.wxml-->
+<!-- <map id="map" longitude="114.435196" latitude="30.423094" scale="18" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height:{{height}}rpx;"></map> -->
+<view class='container'>
+  <text>请按返回键或点击下面按钮</text>
+  <button type="primary" ontap="back">返回首页</button>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/index/module/introduction.wxml-->
+<import src="template.wxml" />
+
+<view class='container'>
+  <template is="head" />
+  <view class='body'>
+    <view class='title'>
+      <text>医院简介</text>
+    </view>
+    <view class='content'>
+        <text decode="{{true}}">&emsp;&emsp;广西中医药大学第一附属医院成立于1942年，是一所集医疗、教学、科研、预防保健、康复为一体的现代化综合性三级甲等中医医院。医院编制床位2233张，拥有东葛院区、仙葫院区、仁爱分院及四个社区卫生医疗服务中心（东葛、金洲、建政、凤岭北）。现有在职职工3568人，高级职称640人，博士生导师23人，博士、硕士865人，培养了国医大师3人，全国名中医3人，全国老中医药专家学术经验继承工作指导老师28人，国家中医药管理局青年岐黄学者2人，“桂派中医大师”18人，广西岐黄学者2人，广西名老中医21人，广西名中医53人，形成了全区（省）最强盛的名中医方阵，是桂派医学流派的发祥地和聚集地。
+      </text>
+    </view>
+    <template is="foot" />
+  </view>
+</view>
+

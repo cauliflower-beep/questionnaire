@@ -1,0 +1,145 @@
+/* pages/consultation/payment.wxss */
+page{
+  background-color: #F8F8F8;
+}
+
+.container{
+  padding: 25rpx;
+}
+
+
+/* 无待缴费款项开始 */
+.empty{
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  color: #555;
+}
+/* 无待缴费款项结束 */
+
+
+/* 代缴费列表开始 */
+.card-item{
+  margin-bottom: 25rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 0 2rpx 2rpx #eeeeee;
+}
+
+.card-item .item-checked{
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-item .item-content{
+  border-left: 1rpx solid #eeeeee;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item .item-content .content-body{
+  border-bottom: 1rpx solid #eeeeee;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-item .item-content .content-body .body-name{
+  line-height: 70rpx;
+}
+
+.card-item .item-content .content-body .body-time{
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #888888;
+}
+
+.card-item .item-content .content-foot{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-item .item-content .content-foot .foot-price{
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #FF6049;
+}
+
+.card-item .item-content .content-foot .foot-detail{
+  font-size: 32rpx;
+}
+/* 代缴费列表结束 */
+
+
+/* 底部防遮挡层开始 */
+.foot{
+  height: 100rpx;
+}
+/* 底部防遮挡层结束 */
+
+
+/* 底部固定栏开始 */
+.operation{
+  border-top: 1rpx solid #eeeeee;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.operation .operation-content{
+  padding: 20rpx;
+  width: 510rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operation .operation-content .content-check{
+  display: flex;
+  align-items: center;
+}
+
+.operation .operation-content .content-check icon{
+  margin-right: 10rpx;
+}
+
+.operation .operation-content .content-total{
+  line-height: 100rpx;
+}
+
+.operation .operation-content .content-total .total-price{
+  font-size: 40rpx;
+  color: rgb(255, 102, 0);
+}
+
+.operation .submit{
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(13, 177, 13);
+  color: white;
+}
+/* 底部固定栏结束 */

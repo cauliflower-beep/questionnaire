@@ -1,0 +1,27 @@
+<!--pages/index/module/departmentDetail.wxml-->
+<view class='container'>
+  <view class='card'>
+
+    <view class='card-item department'>
+      <text class='title'>科室</text>
+      <text class='content'>{{name}}</text>
+    </view>
+
+    <block wx:for="{{content}}">
+      <view wx:if="{{name == item.name}}" wx:key=''>
+        <view class='card-item department'>
+          <text class='title'>主要设备</text>
+          <text class='content' wx:if="{{item.equipment == ''}}">暂无介绍</text>
+          <text class='content' wx:else>{{item.equipment}}</text>
+        </view>
+        <view class='card-item department'>
+          <text class='title'>服务项目</text>
+          <text class='content'>{{item.service}}</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+  
+  <view class='foot'></view>
+</view>

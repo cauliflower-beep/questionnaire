@@ -1,0 +1,17 @@
+/* pages/index/module/introduction.wxss */
+@import "module.wxss";
+
+.body .content{
+  border: 1rpx solid #1296db;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  background-color: white;
+}
+
+.body .content text{
+  line-height: 70rpx;
+}
+
+.foot{
+  height: 40rpx;
+}

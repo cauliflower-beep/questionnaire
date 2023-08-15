@@ -1,0 +1,91 @@
+const CONFIG = require('../../utils/config.js');
+const AJAXCONFIG = require('../../utils/ajaxConfig.js');
+Page({
+  data: {
+    // 判断用户是否登录
+    isLogin: false,
+
+    // 小时数
+    nowHours: "",
+    // 日间开始时间
+    dayStartTime: 5,
+    // 夜间开始时间
+    nightStartTime: 17,
+
+    // 轮播图
+    swiperImgUrls: CONFIG.IMAGE.SWIPER,
+    // 是否显示面板指示点
+    indicatorDots: true,
+    // 是否自动播放
+    autoplay: true,
+    // 是否采用衔接滑动
+    circular: true,
+    // 自动切换时间间隔
+    interval: 5000,
+    // 滑动动画时长
+    duration: 1000,
+
+    // 近日天气
+    weather: [],
+
+    // 近日天气是否加载成功
+    isWeather: false,
+
+    // 顶部导航
+    introductionImgUrls: CONFIG.MENU.INTRODUCTION,
+    // 就诊服务
+    consultation: CONFIG.MENU.CONSULTATION,
+    // 更多服务
+    information: CONFIG.MENU.INFORMATION,
+    // 健康天地
+    healthy: CONFIG.MENU.HEALTHY,
+  },
+
+  /**
+   * 前往服务页面
+   */
+  toService: function(e) {
+    console.log(e)
+    console.log(e.currentTarget.dataset.url)
+    wx.navigateTo({
+      url: e.currentTarget.dataset.url,
+    })
+  },
+
+  onLoad: function() {
+    // 获取当前时间戳
+    var timestamp = Date.parse(new Date());
+    timestamp = timestamp / 1000;
+
+    // 获取当前时间
+    var n = timestamp * 1000;
+    var date = new Date(n);
+    // 小时
+    var hours = date.getHours();
+    console.log(hours);
+
+    this.setData({
+      nowHours: hours
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function() {
+    var _this = this;
+    wx.request({
+      url: AJAXCONFIG.API.WEATHER,
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function(res) {
+        console.log(res.data.results[0]);
+        _this.setData({
+          weather: res.data.results[0].weather_data,
+          isWeather: true
+        })
+      }
+    })
+  }
+})

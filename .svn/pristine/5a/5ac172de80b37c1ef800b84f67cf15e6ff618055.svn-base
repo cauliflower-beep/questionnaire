@@ -1,0 +1,238 @@
+const IMAGE = {
+  CONSULT_MAIN: 'https://s1.ax1x.com/2018/08/06/PruKkq.png',
+  SWIPER: [{
+      url: 'http://img.gaosan.com/upload/webimg/2149.jpg'
+    },
+    {
+      url: 'https://s1.ax1x.com/2018/07/15/PMOQFU.jpg'
+    },
+    {
+      url: 'https://s1.ax1x.com/2018/07/15/PMX9XR.jpg'
+    }
+  ],
+  DEPARTMENT_SETTING: 'https://s1.ax1x.com/2018/08/04/PDCvGR.jpg',
+  GUIDE: 'https://s1.ax1x.com/2018/08/04/PDCji9.jpg',
+  FEEDBACK: {
+    OPINION_TITLE: 'https://s1.ax1x.com/2018/08/05/PDQSbj.png',
+    OPINION_CONTENT: 'https://s1.ax1x.com/2018/08/05/PDMHUI.png',
+    EVALUATION: 'https://s1.ax1x.com/2018/08/05/PDM8Bj.png',
+    STAR_CHECKED: 'https://s1.ax1x.com/2018/08/05/PDQ0it.png',
+    STAR_UNCHECKED: 'https://s1.ax1x.com/2018/08/05/PDQdII.png',
+    ENVAROMENT: 'https://s1.ax1x.com/2018/08/05/PDMaCV.png',
+    SKILL: 'https://s1.ax1x.com/2018/08/05/PDMd3T.png',
+    ATTITUDE: 'https://s1.ax1x.com/2018/08/05/PDMN40.png',
+  },
+  REPLY_HEAD: 'https://s1.ax1x.com/2018/08/07/PsKpOe.jpg',
+  PRICE_MENU: [
+    {
+      image: "https://s1.ax1x.com/2018/08/05/PDOeeA.jpg"
+    },
+    {
+      image: "https://s1.ax1x.com/2018/08/05/PDOnot.jpg"
+    },
+    {
+      image: "https://s1.ax1x.com/2018/08/05/PDOmdI.jpg"
+    },
+    {
+      image: "https://s1.ax1x.com/2018/08/05/PDOEsH.jpg"
+    },
+    {
+      image: "https://s1.ax1x.com/2018/08/05/PDOVLd.jpg"
+    }
+  ],
+  ABOUT: {
+    LOGO: 'https://s1.ax1x.com/2018/08/05/PDging.jpg',
+    DEVELOPER: 'https://s1.ax1x.com/2018/08/05/PDcspV.png',
+    CONTACT: 'https://s1.ax1x.com/2018/08/05/PDcylT.png',
+  }
+};
+
+const ICON = {
+  TIPS_SMALL: 'https://s1.ax1x.com/2018/08/06/PrELAf.png',
+  QUESTION: 'https://s1.ax1x.com/2018/08/04/PDEYrt.png',
+  ANSWER: 'https://s1.ax1x.com/2018/08/04/PDEJKI.png',
+  DEPARTMENT: 'https://s1.ax1x.com/2018/08/05/PDudI0.png',
+  WEEK: 'https://s1.ax1x.com/2018/08/05/PDu0iV.png',
+  TIME: 'https://s1.ax1x.com/2018/08/05/PDuaaq.png',
+};
+
+const PERSONAL = {
+  NAV_FIRST: [{
+      name: "我的挂号单",
+      imgUrl: "https://s1.ax1x.com/2018/08/06/PrBi4K.png",
+      url: "../nav/registrationList"
+    },
+    {
+      name: "我的缴费单",
+      imgUrl: "https://s1.ax1x.com/2018/08/06/PrweRe.png",
+      url: "../nav/paymentList"
+    },
+    {
+      name: "我的报告单",
+      imgUrl: "https://s1.ax1x.com/2018/08/06/PrwOOA.png",
+      url: "../nav/reportList"
+    }
+  ],
+  NAV_SECOND: [{
+      name: "关于我们",
+      imgUrl: "https://s1.ax1x.com/2018/08/06/PrBmDA.png",
+      url: "../nav/about"
+    },
+    {
+      name: "意见反馈",
+      imgUrl: "https://s1.ax1x.com/2018/08/06/PrBKEt.png",
+      url: "../nav/feedback"
+    }
+  ]
+};
+
+const HEALTH_TANG = [{
+    image: "https://s1.ax1x.com/2018/08/04/PBjhX4.jpg",
+    description: "国医堂牌匾全貌"
+  },
+  {
+    image: "https://s1.ax1x.com/2018/08/04/PBjfcF.jpg",
+    description: "前来就诊的病人排队等候"
+  },
+  {
+    image: "https://s1.ax1x.com/2018/08/04/PBjghV.jpg",
+    description: "向楠教授在为病人把脉"
+  },
+  {
+    image: "https://s1.ax1x.com/2018/08/04/PBjRpT.jpg",
+    description: "中药师正在称量药物"
+  },
+  {
+    image: "https://s1.ax1x.com/2018/08/04/PBjct0.jpg",
+    description: "康复师正在为病人针灸治疗"
+  },
+  {
+    image: "https://s1.ax1x.com/2018/08/04/PBjW1U.jpg",
+    description: "邓焜在向记者介绍国医堂创建的服务宗旨"
+  }
+];
+
+const MENU = {
+  INTRODUCTION: [{
+      url: "../module/introduction",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCP4s.png",
+      name: "医院简介"
+    },
+    {
+      url: "../module/department",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCZuT.png",
+      name: "科室介绍"
+    },
+    {
+      url: "../module/consult",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCEvV.png",
+      name: "联系方式"
+    },
+    {
+      url: "../module/expert",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCAg0.png",
+      name: "专家风采"
+    },
+    {
+      url: "../module/navigation",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCk3q.png",
+      name: "来院导航"
+    },
+    {
+      url: "../module/guide",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCFCn.png",
+      name: "就诊指南"
+    }
+  ],
+  CONSULTATION: [{
+      name: "在线挂号",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCuE4.png",
+      url: "../consultation/registration"
+    },
+    {
+      name: "就诊缴费",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCM59.png",
+      url: "../consultation/payment"
+    },
+    {
+      name: "取报告单",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCKUJ.png",
+      url: "../consultation/report"
+    },
+    {
+      name: "快速问诊",
+      imgUrl: "https://s1.ax1x.com/2018/08/06/PrdpHP.png",
+      url: "../consultation/consult"
+    }
+  ],
+  INFORMATION: [{
+      name: "智能导诊",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCd5d.png",
+      url: "../more/ai"
+    },
+    {
+      name: "学生报销",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCD2t.png",
+      url: "../more/studentReimbursement"
+    },
+    {
+      name: "教工报销",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCrxP.png",
+      url: "../more/teacherReimbursement"
+    },
+    {
+      name: "价格目录",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCyKf.png",
+      url: "../more/price"
+    },
+    {
+      name: "我的病历",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCB8I.png",
+      url: "../more/medicalRecord"
+    },
+    {
+      name: "挂号查询",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCcqS.png",
+      url: "../more/search"
+    },
+    {
+      name: "应诊时间",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDC6r8.png",
+      url: "../more/time"
+    },
+    {
+      name: "就医反馈",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDC0PA.png",
+      url: "../more/feedback"
+    }
+  ],
+  HEALTHY: [{
+      name: "健康教育",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDC8v6.png",
+      url: "../health/education"
+    },
+    {
+      name: "针灸推拿",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDC3gx.png",
+      url: "../health/acupuncture"
+    },
+    {
+      name: "中医调理",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDC181.png",
+      url: "../health/conditioning"
+    },
+    {
+      name: "国医堂",
+      imgUrl: "https://s1.ax1x.com/2018/08/04/PDCJKK.png",
+      url: "../health/tang"
+    }
+  ]
+};
+
+module.exports = {
+  IMAGE,
+  ICON,
+  MENU,
+  PERSONAL,
+  HEALTH_TANG
+}

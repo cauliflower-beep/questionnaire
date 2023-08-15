@@ -1,0 +1,70 @@
+/* pages/nav/about.wxss */
+page{
+  background-color: #FAFAFA;
+}
+
+.info{
+  padding: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info image{
+  border-radius: 50%;
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.info text{
+  margin-top: 20rpx;
+}
+
+.info text.name{
+  font-size: 40rpx;
+  font-weight: 700;
+  color: rgb(0, 119, 255);
+}
+
+.info text.version{
+  font-size: 32rpx;
+  color: #555;
+}
+
+.card-list{
+  padding: 0 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item{
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: linear-gradient(to right, #FF00FF , #FF83FA);
+  color: whitesmoke;
+}
+
+.card-item image{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.card-item .content{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-item .content .main{
+  font-weight: 700;
+}
+
+.card-item .content .note{
+  font-size: 30rpx;
+}

@@ -1,0 +1,29 @@
+<!--pages/more/time.wxml-->
+<view class='container'>
+
+  <view class='card'>
+    <block wx:for='{{times}}' wx:key=''>
+      <view class='card-item'>
+        <view class='item-title'>
+          <view class='image-container title-image'>
+            <image src='{{departmentImgUrl}}'></image>
+          </view>
+          <view class='title-text'>{{item.department}}</view>
+        </view>
+        <view class='item-content'>
+          <view class='image-container content-image'>
+            <image src='{{weekImgUrl}}'></image>
+          </view>
+          <view class='contet-text'><text>{{item.week}}</text></view>
+        </view>
+        <view class='item-content'>
+          <view class='image-container content-image'>
+            <image src='{{timeImgUrl}}'></image>
+          </view>
+          <view class='contet-text'><text>{{item.time}}</text></view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

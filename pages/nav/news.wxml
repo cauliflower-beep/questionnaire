@@ -1,0 +1,37 @@
+<!--pages/nav/news.wxml-->
+<view class='container'>
+
+  <view class='topbar'>
+    <view class='topbar-item {{isDms ? "topbar-active" : "topbar-disabled"}}' bindtap='chooseDms' >私信</view>
+    <view class='topbar-item {{isNotice ? "topbar-active" : "topbar-disabled"}}' bindtap='chooseNotice'>通知</view>
+  </view>
+
+  <view class='news' wx:if='{{isDms}}'>
+    <block wx:for='{{dms}}' wx:key=''>
+      <view class='news-item' data-id='{{item.id}}' bindtap='toDmsDetail'>
+        <view class='item-head'>
+          <view class='head-source'>
+            <text data-doctorid='{{item.doctorId}}' catchtap='toDoctor' class='source-name'>{{item.doctorName}}{{item.position}}</text>回答了您的提问
+          </view>
+          <view class='head-time'>{{item.time}}</view>
+        </view>
+        <view class='item-title'>{{item.question}}</view>
+        <view class='item-content'>{{item.content}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class='news' wx:if='{{isNotice}}'>
+    <block wx:for='{{notice}}' wx:key=''>
+      <view class='news-item' data-id='{{item.id}}' bindtap='toNoticeDetail'>
+        <view class='item-head'>
+          <view class='head-source'>系统向您发送了一条通知</view>
+          <view class='head-time'>{{item.time}}</view>
+        </view>
+        <view class='item-title'>{{item.title}}</view>
+        <view class='item-content'>{{item.content}}</view>
+      </view>
+    </block>
+  </view>
+
+</view>

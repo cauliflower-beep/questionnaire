@@ -1,0 +1,17 @@
+<!--pages/nav/registrationList.wxml-->
+<view class='container'>
+
+  <view class='register-list'>
+    <block wx:for='' wx:key=''>
+      <view class='register-item'>
+        <!-- 左侧时间 -->
+        <view class='time'></view>
+        <!-- 右侧内容 -->
+        <view class='content'>
+          
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

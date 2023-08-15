@@ -1,0 +1,26 @@
+<!--pages/nav/about.wxml-->
+<view class='container'>
+
+  <!-- 小程序图标、名称及版本 -->
+  <view class='info'>
+    <image src='{{iconImgUrl}}'></image>
+    <text class='name'>{{name}}</text>
+    <text class='version'>V {{version}}</text>
+  </view>
+
+  <!-- 卡片式介绍 -->
+  <view class='card-list'>
+    <block wx:for='{{cardList}}' wx:key=''>
+      <view class='card-item'>
+        <!-- 介绍图标 -->
+        <image src='{{item.imgUrl}}'></image>
+        <!-- 介绍文字 -->
+        <view class='content'>
+          <text class='main'>{{item.main}}</text>
+          <text class='note'>{{item.note}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

@@ -1,0 +1,35 @@
+<!--pages/equipment/equipment.wxml-->
+<view class='container'>
+
+  <!-- 轮播公告 -->
+  <view class='wheel'>
+    <swiper class='swiper' indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{swiperImgUrls}}" wx:key="url">
+        <swiper-item>
+          <image bindtap='toAnnouncement' src="{{item.url}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 上方导航条 -->
+  <view class='topbar'>
+    <block wx:for='{{topbar}}' wx:key=''>
+      <view class='topbar-item'>
+        <image src='{{item.img}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 报修清单 -->
+  <view class='list'>
+    <block wx:for='' wx:key=''>
+      <view class='list-item'>
+        
+      </view>
+    </block>
+  </view>
+
+</view>

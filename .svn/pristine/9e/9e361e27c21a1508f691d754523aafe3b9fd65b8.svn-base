@@ -1,0 +1,47 @@
+page{
+  background-color: #efefef;
+  color: #555;
+  font-family: "楷体";
+}
+
+.container{
+  margin: 20rpx;
+}
+
+.head{
+  width: 100%;
+}
+
+.head image{
+  border-radius: 10rpx;
+  width: 100%;
+  height: 300rpx; 
+}
+
+.body .title{
+  padding: 0 30rpx;
+  margin: 50rpx 0 30rpx 0;
+  font-size: 42rpx;
+}
+
+.card{
+  padding: 20rpx 30rpx;
+  border-radius: 10rpx;
+  background-color: white;
+}
+
+.card-item{
+  border-bottom: 1rpx solid #efefef;
+  width: 100%;
+  line-height: 100rpx;
+  font-size: 35rpx;
+}
+
+.card-item .item-right{
+  float: right;
+  padding-right: 10rpx;
+}
+
+.foot{
+  height: 40rpx;
+}

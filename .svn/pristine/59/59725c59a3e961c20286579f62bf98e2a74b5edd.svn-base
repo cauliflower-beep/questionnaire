@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      获取头像昵称
+    </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="nav">
+    <block wx:for="{{nav_first}}" wx:key="name">
+      <view class='nav-item' data-url='{{item.url}}' bindtap='toNav'>
+        <view class='item-image'>
+          <image src='{{item.imgUrl}}'></image>
+        </view>
+        <view class='item-title'> 
+          <text class='text-left'>{{item.name}}</text>
+          <text class='text-right'>></text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="nav">
+    <view class='nav-item' data-url='../nav/news' bindtap='toNav'>
+      <view class='item-image'>
+        <image src='https://s1.ax1x.com/2018/08/06/Pra8mt.png'></image>
+      </view>
+      <view class='item-title'> 
+        <text class='text-left'>我的消息</text>
+        <text class='text-right'>></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="nav">
+    <block wx:for="{{nav_second}}" wx:key="name">
+      <view class='nav-item' data-url='{{item.url}}' bindtap='toNav'>
+        <view class='item-image'>
+          <image src='{{item.imgUrl}}'></image>
+        </view>
+        <view class='item-title'> 
+          <text class='text-left'>{{item.name}}</text>
+          <text class='text-right'>></text>
+        </view> 
+      </view>
+    </block>
+  </view>
+
+  <button type="primary" ontap="quit">退出登录</button>
+
+  <view class='foot'></view>
+
+</view>

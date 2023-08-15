@@ -1,0 +1,28 @@
+<!--pages/index/consultation/registration.wxml-->
+<view class='container'>
+
+  <!-- 选择科室 -->
+  <view wx:if='{{!isLoading}}' class='department department-active' bindtap='chooseDepartment'>
+    <view class='department-title'>科室</view>
+    <view class='department-content'>
+      <view class='content-name'>{{department[departmentIndex].name}} ></view>
+    </view>
+  </view>
+
+  <view wx:if='{{isLoading}}' class='department department-disabled'>
+    <view class='department-title'>科室</view>
+    <view class='department-content'>
+      <view class='content-name'>{{department[departmentIndex].name}} ></view>
+    </view>
+  </view>
+
+  <!-- 一键挂号 -->
+  <view class='body'>
+    <view wx:if='{{isRegister && !isLoading}}' class='register register-active' bindtap='toRegister'>一键挂号</view>
+    <view wx:if='{{!isRegister}}' class='register register-disabled'>一键挂号</view>
+    <view wx:if='{{isRegister && isLoading}}' class='register register-disabled'>
+      <image src='{{loadingImgUrl}}'></image>
+    </view>
+  </view>
+
+</view>

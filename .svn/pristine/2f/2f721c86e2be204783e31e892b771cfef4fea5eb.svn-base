@@ -1,0 +1,117 @@
+/**index.wxss**/
+
+page {
+  background-color: #f8f8f8;
+  font-size: 30rpx;
+  color: #555;
+}
+
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 注意，设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。 */
+
+.module {
+  display: flex;
+  /* flex-direction属性决定主轴的方向（即项目的排列方向） */
+  flex-direction: row;
+  /* 默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。 */
+  flex-wrap: wrap;
+  /* justify-content属性定义了项目在主轴上的对齐方式。 */
+  justify-content: space-between;
+  margin: 25rpx 25rpx 0 25rpx;
+  border-radius: 10rpx;
+  width: 700rpx;
+  height: 160rpx;
+  text-align: center;
+}
+
+.module-item {
+  flex: 1;
+  border-radius: 10rpx;
+  width: 230rpx;
+  background-color: white;
+  height: 75rpx;
+  line-height: 75rpx;
+}
+
+.module-item image {
+  vertical-align: middle;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.module-item text {
+  margin-left: 10rpx;
+  line-height: 75rpx;
+}
+
+.card {
+  margin-top: 20rpx;
+  margin-left: 25rpx;
+  padding: 0 30rpx;
+  border-radius: 10rpx;
+  width: 640rpx;
+  max-width: 640px;
+  background-color: white;
+}
+
+.card-head {
+  border-bottom: 2rpx solid #efefef;
+  padding: 30rpx 0;
+  height: 40rpx;
+}
+
+.card-head .card-head-content {
+  border-left: 5rpx solid #1296db;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.card-head .card-head-content text {
+  padding-left: 20rpx;
+}
+
+.card-head-content text.content-right {
+  float: right;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30rpx 0;
+  text-align: center;
+}
+
+.card-body-item {
+  flex: 1;
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  width: 160rpx;
+}
+
+.card-body-item-image {
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.card-body-item-weather {
+  width: 100rpx;
+  height: 71.5rpx;
+}
+
+.card-body-item .item-name {
+  margin-top: 10rpx;
+}
+
+.foot {
+  height: 40rpx;
+}

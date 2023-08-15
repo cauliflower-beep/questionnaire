@@ -1,0 +1,23 @@
+<!--pages/health/tang.wxml-->
+<view class='container'>
+
+  <view class='introduced'>
+    <text decode="{{true}}">&emsp;&emsp;2015年4月12日晚上18:40分，湖北电视台体育频道专题报道了湖北经济学院医院国医堂，该新闻于4月14日早上6:40重播。
+    &emsp;&emsp;目前，湖北省卫生计生委命名公布的第三批湖北省中医药“三堂一室”名单中，湖北经济学院医院国医堂“榜上有名”。湖北电视台记者就此展开专题采访报道，内容包括国医堂就诊环境、医护人员工作情况以及各种中医药特色服务情况。国医堂负责人向记者介绍了国医堂创建的服务宗旨以及国医堂创建以来反响良好的多种特色项目。
+    &emsp;&emsp;据了解，节目播出后，学校师生以及周边居民对湖北经济学院医院国医堂的服务目的有了更深的体会，充分肯定了国医堂的服务质量和医疗水平。此外，这次的新闻报道也有效提升了国医堂的知名度和社会影响力，为国医堂的发展和服务创造了更好的舆论环境。</text>
+  </view>
+
+  <view class='card'>
+    <block wx:for='{{details}}' wx:key=''>
+      <view class='card-item'>
+        <view class='item-image'>
+          <image src='{{item.image}}'></image>
+        </view>
+        <view class='item-description'>
+          <text>{{item.description}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

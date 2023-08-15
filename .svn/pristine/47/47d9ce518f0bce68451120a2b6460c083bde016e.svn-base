@@ -1,0 +1,61 @@
+<!--pages/consultation/paymentDetail.wxml-->
+<view class='container'>
+
+  <!-- 头部 -->
+  <view class='head'>
+    <view class=''>项目/单价</view>
+    <view class=''>自费金额</view>
+  </view>
+
+  <!-- 明细信息 -->
+  <view class='list'>
+
+    <block wx:for='{{list}}' wx:key=''>
+      <view class='list-item'>
+        <!-- 第一行 -->
+        <view class='item-line line-first'>
+          <!-- 名称 -->
+          <view class='item-name'>{{item.name}}</view>
+          <!-- 总价 -->
+          <view class='item-total'>￥{{item.price * item.num}}</view>
+        </view>
+        <!-- 第二行 -->
+        <view class='item-line line-second'>
+          <!-- 单价 -->
+          <view class='item-price'>单价：￥{{item.price}}</view>
+          <!-- 数量 -->
+          <view class='item-num'>×{{item.num}}{{item.quantifier}}</view>
+        </view>
+      </view>
+    </block>
+  
+  </view>
+
+  <!-- 温馨提示 -->
+  <view class='tips'>
+    <view class='tips-head'>
+      <image src='{{tipsImgUrl}}'></image>
+      <view class='tips-head-title'>温馨提示</view>
+    </view>
+    <view class='tips-body'>
+      <block wx:for='{{tips}}' wx:key=''>
+        <view class='tip-item'>
+          <text>{{index+1}}、</text>
+          <text>{{item.tip}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 底部防遮挡 -->
+  <view class='foot'></view>
+
+  <!-- 底部固定栏 -->
+  <view class='operation'>
+    <view class='operation-content'>
+      <view class='content-total'>合计：<text class='total-price'>￥{{totalPrice}}</text></view>
+    </view>
+    <view class='submit' bindtap='settlement'>结算</view>
+  </view>
+
+</view>

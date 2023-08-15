@@ -1,0 +1,23 @@
+/* pages/health/tang.wxss */
+@import "health.wxss";
+
+.card .card-item .item-image{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .card-item .item-image image{
+  width: 100%;
+}
+
+.card .card-item .item-description{
+  margin-top: 25rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.card .card-item .item-description text{
+  font-size: 30rpx;
+}

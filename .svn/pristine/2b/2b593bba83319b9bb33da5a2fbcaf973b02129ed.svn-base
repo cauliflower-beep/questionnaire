@@ -1,0 +1,46 @@
+// pages/index/module/department.js
+const CONFIG = require('../../utils/config.js');
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    imgUrl: CONFIG.IMAGE.DEPARTMENT_SETTING,
+
+    departmentList: [{
+        name: "内科"
+      },
+      {
+        name: "外科"
+      },
+      {
+        name: "妇科"
+      },
+      {
+        name: "眼耳鼻喉科"
+      },
+      {
+        name: "口腔科"
+      },
+      {
+        name: "检验科"
+      },
+      {
+        name: "B超室"
+      },
+      {
+        name: "综合门诊部"
+      },
+      {
+        name: "康复科"
+      },
+      {
+        name: "公共卫生科"
+      },
+      {
+        name: "洪山门诊部"
+      }
+    ]
+  }
+})

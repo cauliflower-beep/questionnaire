@@ -1,0 +1,49 @@
+<!--pages/consultation/payment.wxml-->
+<view class='container'>
+
+  <view wx:if='{{payment.length == 0}}'>
+    <view class='empty'>- 您没有待缴费的款项 -</view>
+  </view>
+
+  <view wx:else>
+
+    <view class='card'>
+      <block wx:for='{{payment}}' wx:key=''>
+        <view class='card-item'>
+          <view class='item-checked'>
+            <icon wx:if='{{item.selected}}' data-index='{{index}}' bindtap='selectList' type='success'></icon>
+            <icon wx:if='{{!item.selected}}' data-index='{{index}}' bindtap='selectList' type='circle'></icon>
+          </view>
+          <view class='item-content'>
+            <view class='content-body'>
+              <view class='body-name'>{{item.name}}</view>
+              <view class='body-time'>订单时间：{{item.time}}</view>
+            </view>
+            <view class='content-foot'>
+              <view class='foot-price'>￥{{item.price}}</view>
+              <view class='foot-detail' data-id='{{item.id}}' bindtap='toDetail'>详情></view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 底部防遮挡 -->
+    <view class='foot'></view>
+
+    <!-- 底部固定栏 -->
+    <view class='operation'>
+      <view class='operation-content'>
+        <view class='content-check'>
+          <icon wx:if='{{selectAllStatus}}' bindtap='checkAll' type='success'></icon>
+          <icon wx:if='{{!selectAllStatus}}' bindtap='checkAll' type='circle'></icon>全选
+        </view>
+        <view class='content-total'>合计：<text class='total-price'>￥{{totalPrice}}</text></view>
+      </view>
+      <view class='submit' bindtap='submit'>结算</view>
+    </view>
+  
+  </view>
+
+</view>
+

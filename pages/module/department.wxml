@@ -1,0 +1,29 @@
+<!--pages/index/module/department.wxml-->
+<import src="template.wxml" />
+
+<view class='container'>
+  <template is="head" />
+  <view class='body'>
+    <view class='title'>
+      <text>机构设置</text>
+    </view>
+    <view class='card'>
+      <image src='{{imgUrl}}'></image>
+    </view>
+    
+    <view class='title'>
+      <text>科室介绍</text>
+    </view>
+    <view class='card'>
+      <block wx:for="{{departmentList}}" wx:key="name">
+        <view class='card-item'>
+          <navigator url='departmentDetail?name={{item.name}}'>
+            <text class='name'>{{item.name}}</text>
+            <text class='item-right'>></text>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+  <template is="foot" />
+</view>

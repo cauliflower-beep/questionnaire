@@ -1,0 +1,41 @@
+<!--pages/health/conditioning.wxml-->
+<view class='container'>
+
+  <view class='content'>
+  
+    <view class='content-title'>
+      <text>简介</text>
+    </view>
+  
+    <view class='introduced'>
+      <text decode="{{true}}">&emsp;&emsp;中医理疗是通过利用人工或自然界物理因素作用于人体，产生有利的反应，达到预防和治疗疾病的方法。也是康复治疗的重要组成部分，物理因素通过人体局部直接作用，和对神经、体液的间接作用引起人体反应，从而调整了血液循环，加快了新陈代谢，促进对细胞组织的修复，调节神经系统的功能，提高免疫功能，消除致病因素，改善病理过程，达到治病目的。
+      &emsp;&emsp;现在我们常用的物理因素有电、光、声、气、磁、温度和机械力等。电疗分直流电、低频电、中频电、高频电和静电等疗法，光疗分红外线，远红外线、可见光线、紫外线和半导体激光等疗法。
+      &emsp;&emsp;由于现代物理学，生物学的迅速发展，物理治疗日益受到重视，已成为临床综合治疗及康复医疗中的一个重要组成部分。物理疗法属无损伤手段，易被病伤残者所接受，物理治疗的作用广，不仅可用于对症治疗，而且可作为对某些疾病的病因治疗，若能正确地选择应用各种物理治疗法，可收到提高疗效、缩短疗程、有利于患者及伤残者的康复。
+      &emsp;&emsp;中医理疗是以中医理论为基础，经络理论为指导的外治法，中医认为人体是一个有机的整体，脏腑之间在生理上是相互协调，相互促进的，同时我们又是自然界中的一份子，早在人类远古时代，人们就会利用自然带来的阳光、温泉水、冷水治疗疾病，强身健体。进入石器时代，人们已开始有了应用石器治疗疾病的方法，而这种方法经过长期的不断改进，不仅在解除人类某些重要疾病方面取得了卓越的成效，同时也为我国医药科学中治疗方法奠定了坚实的物质基础。
+      &emsp;&emsp;中医理疗在发展过程中，继承和发扬中医理论，以中医理论的五大支柱，（砭、针、灸、药和导引按跷），为基础，以经络学为指导，结合患者的病症在进行调治的同时，也充分利用现代化的理疗设施进行配合治疗，将会出现事半功倍的效果。</text>
+    </view>
+
+  </view>
+
+  <view class='content'>
+
+    <view class='content-title'>
+      <text>理疗作用</text>
+    </view>
+
+    <view class='introduced'>
+      <block wx:for='{{introduced}}' wx:key=''>
+        <view class='introduced-item'>
+          <view class='item-title'>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='item-content'>
+            <text decode="{{true}}">&emsp;&emsp;{{item.introduction}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  
+  </view>
+
+</view>
